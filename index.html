@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWA example</title>
+
+    <link rel="manifest" href="./manifest.json">
+    <link rel="shortcut icon" href="./imagenPredestibada.jpg" type="image/x-icon">
+
 </head>
 <body>
     <h1> Efectivamente, hay conexion </h1>
+
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+          navigator.serviceWorker.register('sw.js')
+        }
+    </script>
+
 </body>
 </html>
